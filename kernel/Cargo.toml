@@ -1,0 +1,13 @@
+[package]
+name = "nexus-kernel"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+log = "0.4"
+noalloc = { version = "0.1", optional = true }
+
+[features]
+default = ["std"]
+std = []
+no_std = ["noalloc"]
