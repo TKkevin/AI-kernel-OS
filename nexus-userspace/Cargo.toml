@@ -1,0 +1,30 @@
+[package]
+name = "nexus-userspace"
+version = "0.1.0"
+edition = "2021"
+description = "Userspace runtime and libraries for NEXUS OS"
+
+[dependencies]
+libc = "0.2"
+spin = "0.9"
+lazy_static = "1.4"
+bitflags = "2.4"
+
+[dependencies.nexus-core]
+path = "../nexus-core"
+
+[lib]
+name = "nexus_userspace"
+path = "src/lib.rs"
+
+[[bin]]
+name = "init"
+path = "src/bin/init.rs"
+
+[[bin]]
+name = "shell"
+path = "src/bin/shell.rs"
+
+[[bin]]
+name = "hello"
+path = "src/bin/hello.rs"

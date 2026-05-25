@@ -5,7 +5,12 @@ members = [
     "memory",
     "security",
     "telemetry",
-    "tools"
+    "tools",
+    "intelligence",
+    "core",
+    "drivers",
+    "nexus-boot",
+    "nexus-userspace"
 ]
 
 [profile.release]
