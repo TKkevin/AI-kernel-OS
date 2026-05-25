@@ -1,0 +1,31 @@
+[package]
+name = "nexus-boot"
+version = "0.1.0"
+edition = "2021"
+description = "UEFI bootloader for NEXUS OS - Tony Stark's vision of boot intelligence"
+
+[dependencies]
+bootloader = { version = "0.11", features = ["map_physical_memory"] }
+x86_64 = "0.14"
+volatile = "0.4"
+spin = "0.9"
+lazy_static = { version = "1.4", features = ["spin_no_std"] }
+bitflags = "2.4"
+
+[dependencies.nexus-kernel]
+path = "../kernel"
+
+[dependencies.nexus-telemetry]
+path = "../telemetry"
+
+[[bin]]
+name = "nexus-boot"
+path = "src/main.rs"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+lto = true
+codegen-units = 1

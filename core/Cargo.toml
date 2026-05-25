@@ -1,0 +1,12 @@
+[package]
+name = "nexus-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+nexus-kernel = { path = "../kernel" }
+nexus-scheduler = { path = "../scheduler" }
+nexus-memory = { path = "../memory" }
+nexus-security = { path = "../security" }
+nexus-telemetry = { path = "../telemetry" }
+nexus-intelligence = { path = "../intelligence" }

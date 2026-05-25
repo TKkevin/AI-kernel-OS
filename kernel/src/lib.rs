@@ -2,6 +2,11 @@
 //! 
 //! The foundational layer of the NEXUS operating system.
 //! Coordinates between hardware abstraction and higher-level subsystems.
+//! 
+//! Integrates:
+//! - Unix Process Model (fork, exec, signals)
+//! - ReactOS Driver Architecture (IRP-based I/O)
+//! - Linux CFS Scheduler
 
 #![no_std]
 
@@ -9,6 +14,7 @@ pub mod boot;
 pub mod hardware;
 pub mod memory;
 pub mod interrupts;
+pub mod unix_compat;
 
 /// Initialize the NEXUS kernel
 pub unsafe fn initialize() {

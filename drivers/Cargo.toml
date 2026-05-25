@@ -1,0 +1,9 @@
+[package]
+name = "nexus-drivers"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+nexus-kernel = { path = "../kernel" }
+nexus-telemetry = { path = "../telemetry" }
+num_cpus = "1.16"
